@@ -1,9 +1,11 @@
 # Hosting
 ## Introduction
-Wetsand hosting service can be used to:
+Firewebkit hosting service can be used to:
 1. Host static website
-2. Host SPA website with routes setup
-3. Host domain names with rewrites to your [serverless function](/services/functions) (e.g, yourdomain.com/api/resize-image)
+2. Host SPA website with routes
+3. Rewrites to your [serverless function](/services/functions) with protected tokens (e.g, yourdomain.com/api/resize-image)
+4. Access private [data](/services/data) with filters etc
+5. Rewrites to your [media](/services/media) and [contents](/services/contents)
 
 ## Deploying a Site
 Follow the following steps to deploy your site.
@@ -33,7 +35,7 @@ Follow the following steps to deploy your site.
 Hosting options determine how requests to your website are handled. This is an object with following high-level fields:
 
  * `ignore <array>` - Array of pattern (string) both glob and regular expressions that will be ignored
- * `forceHttps <boolean>` – Wetsand forces (and redirects) non-HTTP URLs to HTTPs
+ * `forceHttps <boolean>` – Firewebkit forces (and redirects) non-HTTP URLs to HTTPs
  * `parked <boolean>` – Responds with wetsand "parked" webpage for every request
  * `trailingSlash <boolean>` – Adds/removes trailing slash to the URLs if not found/found (respectively)
  * `headers <array>`
@@ -57,7 +59,7 @@ Hosting options determine how requests to your website are handled. This is an o
  Any pattern matched to the `source` will get specified `headers` added to the request.
 
  ### Rewrite Rules
- Wetsand rewrites can be powerful and it can be dangerous if not correctly written.
+ Firewebkit rewrites can be powerful and it can be dangerous if not correctly written.
  Each rewrite rule is an object with `source` which is a URL resolving pattern.
 
  Here you will find various examples that you can use to create your rewrite rules.
@@ -118,7 +120,7 @@ Hosting options determine how requests to your website are handled. This is an o
     }
  ]
  ```
- Wetsand functions are very flexible and allow you to write single function with multiple routes. If you want to call
+ Firewebkit functions are very flexible and allow you to write single function with multiple routes. If you want to call
  that route with/or without query parameters, you can use this rewrite rule.
 
  This would send `req.query.min` and `req.query.max` with specified values. For example, `example.com/api/query-people/18-20`
