@@ -24,7 +24,7 @@ Follow the following steps to deploy your site.
  4. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
  5. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
  ```bash
- yarn wetsand deploy-site -t "$FIREWEBKIT_TOKEN" -m "My first website"
+ firewebkitdeploy-site -t "$FIREWEBKIT_TOKEN" -m "My first website"
  ```
 
  > Learn more about [tokens here](/security/tokens.md)
