@@ -41,10 +41,10 @@ Add following object to your wetsand configruation
 ```
 
 ## Deploying a Function
-1. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
-2. Now use [wetsand-cli](https://www.npmjs.com/package/wetsand-cli) to deploy:
+1. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
+2. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
 ```bash
-yarn wetsand deploy-function -t "$WETSAND_TOKEN" --function read-info -m "My first function"
+yarn wetsand deploy-function -t "$FIREWEBKIT_TOKEN" --function read-info -m "My first function"
 ```
 3. You can confirm the function is deployed by going to [functions page](https://console.firewebkit.com/functions)
 4. You can now trigger the function by checking `Trigger` column in list of your functions (on function page).

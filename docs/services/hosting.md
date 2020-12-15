@@ -21,10 +21,10 @@ Follow the following steps to deploy your site.
     }
     ```
  3. Ensure you have "build" directory - this is the source of your website to be pushed
- 4. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
- 5. Now use [wetsand-cli](https://www.npmjs.com/package/wetsand-cli) to deploy:
+ 4. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
+ 5. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
  ```bash
- yarn wetsand deploy-site -t "$WETSAND_TOKEN" -m "My first website"
+ yarn wetsand deploy-site -t "$FIREWEBKIT_TOKEN" -m "My first website"
  ```
 
  > Learn more about [tokens here](/security/tokens.md)
