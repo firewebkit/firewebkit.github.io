@@ -3,9 +3,9 @@ To invite someone to join your wetsand project, you will need to have permission
 
 #### 1. Log in to Wetsand
 
-#### 2. Go to [project dashboard](https://console.amrayn.com/)
+#### 2. Go to [project dashboard](https://console.firewebkit.com/)
 
-#### 2. Click on [Security](https://console.amrayn.com/security) icon
+#### 2. Click on [Security](https://console.firewebkit.com/security) icon
 
 <img src="https://i.imgur.com/htIC9Mm.png" alt="drawing" style="width:100px;border:1px dashed #ccc;"/>
 

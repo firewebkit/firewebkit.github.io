@@ -3,7 +3,7 @@ Creating wetsand project is a simple few step process that will give you ability
 
 #### 1. Log in to Wetsand
 
-#### 2. Go to [projects](https://console.amrayn.com/projects)
+#### 2. Go to [projects](https://console.firewebkit.com/projects)
 
 #### 3. Click "Create Project"
 

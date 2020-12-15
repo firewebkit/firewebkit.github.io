@@ -8,7 +8,7 @@ The segement must be specified even if you're using just the page. We recommend 
 
 All the segements can be accessed via GET API call.
 
-* `https://api.amrayn.com/<project_id>/contents/about` - this will display contents in following format:
+* `https://api.firewebkit.com/<project_id>/contents/about` - this will display contents in following format:
 ```
 {
   "copyright": {
@@ -22,7 +22,7 @@ All the segements can be accessed via GET API call.
 }
 ```
 
-* `https://api.amrayn.com/<project_id>/contents/about/background` - this will display contents in following format:
+* `https://api.firewebkit.com/<project_id>/contents/about/background` - this will display contents in following format:
 
 ```
 {

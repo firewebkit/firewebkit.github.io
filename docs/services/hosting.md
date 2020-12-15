@@ -3,15 +3,15 @@
 Wetsand hosting service can be used to:
 1. Host static website
 2. Host SPA website with routes setup
-3. Host domain names with rewrites to your [serverless function](/services/functions.md) (e.g, yourdomain.com/api/resize-image)
+3. Host domain names with rewrites to your [serverless function](/services/functions) (e.g, yourdomain.com/api/resize-image)
 
 ## Deploying a Site
 Follow the following steps to deploy your site.
- 1. First create target to deploy the site to. This can be done from [UI](https://console.amrayn.com/hosting) by clicking "Add New Site"
+ 1. First create target to deploy the site to. This can be done from [UI](https://console.firewebkit.com/hosting) by clicking "Add New Site"
     * "Target" is a string identifier for the source code (to point to) (e.g, `production`)
     * "Name" is name for your website (e.g, `www-redirect`)
     * "Commit Message" is a simple message that helps you as a developer.
- 2. Write `wetsand.json` and specify `hosting` object that looks like:
+ 2. Write `firewebkit.json` and specify `hosting` object that looks like:
     ```json
     "hosting": {
       "target": "default",
@@ -21,7 +21,7 @@ Follow the following steps to deploy your site.
     }
     ```
  3. Ensure you have "build" directory - this is the source of your website to be pushed
- 4. Generate wetsand token from [security](https://console.amrayn.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
+ 4. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
  5. Now use [wetsand-cli](https://www.npmjs.com/package/wetsand-cli) to deploy:
  ```bash
  yarn wetsand deploy-site -t "$WETSAND_TOKEN" -m "My first website"
@@ -99,7 +99,7 @@ Hosting options determine how requests to your website are handled. This is an o
 
  This is a simple pattern matching that results in calling the function. For example,
  if your hosting domain is example.com, when you call `example.com/api/read-info` it will
- call `read-info` function, just as if you were to call `https://fn.amrayn.com/<client-id>/read-info`.
+ call `read-info` function, just as if you were to call `https://fn.firewebkit.com/<client-id>/read-info`.
 
  `acceptQueryParameters` means any query parameters in `/api/read-info` will be passed down to the function.
 
@@ -150,14 +150,14 @@ Hosting options determine how requests to your website are handled. This is an o
     }
  ```
 
- You can use this option to pass in `amrayn-token` securily without exposing it to public.
+ You can use this option to pass in `firewebkit-token` securily without exposing it to public.
 
  ```json
    {
       "source": "/api/teenagers/:min",
       "function": "read-info",
       "query": {
-        "amrayn-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ3dm8xNm14..."
+        "firewebkit-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ3dm8xNm14..."
       }
     }
  ```
@@ -184,7 +184,7 @@ Hosting options determine how requests to your website are handled. This is an o
    }
  ]
  ```
-Calls list of APIs without needing to specify client ID. This essentially redirects to `https://api.amrayn.com/<client-id>/<coreApi>` (uses internal host instead of external (i.e, `api.amrayn.com`)
+Calls list of APIs without needing to specify client ID. This essentially redirects to `https://api.firewebkit.com/<client-id>/<coreApi>` (uses internal host instead of external (i.e, `api.amrayn.com`)
 
 If, for any reason, you need to use `apiv1` key instead of `api`.
 

@@ -41,12 +41,12 @@ Add following object to your wetsand configruation
 ```
 
 ## Deploying a Function
-1. Generate wetsand token from [security](https://console.amrayn.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
+1. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `WETSAND_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
 2. Now use [wetsand-cli](https://www.npmjs.com/package/wetsand-cli) to deploy:
 ```bash
 yarn wetsand deploy-function -t "$WETSAND_TOKEN" --function read-info -m "My first function"
 ```
-3. You can confirm the function is deployed by going to [functions page](https://console.amrayn.com/functions)
+3. You can confirm the function is deployed by going to [functions page](https://console.firewebkit.com/functions)
 4. You can now trigger the function by checking `Trigger` column in list of your functions (on function page).
 
 ## Cors
@@ -84,7 +84,7 @@ The functions can be triggered using
 2. Schedule –– `triggerValue` needs to be [cron expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm) e.g, `1 0 * * *`
 
 ### HTTP
-There are 3 types of HTTP function you can create. These are the values used by `trigger` field in wetsand.json.
+There are 3 types of HTTP function you can create. These are the values used by `trigger` field in firewebkit.json.
 
 #### `HTTP`
 Anyone can trigger these functions using an HTTP client.
@@ -92,7 +92,7 @@ Anyone can trigger these functions using an HTTP client.
 #### `HTTP_AUTH`
 These function require security token and passed in to query parameter when triggering the function. The security token must be scoped to `/authfn`
 
-The security token is passed in with `amrayn-token` parameter. For example `https://fn.amrayn.com/abcdefghijklmnopqrstuvwxyz/save-user?amrayn-token=<Security Token>`. In this example `abcdefghijklmnopqrstuvwxyz` is your project ID.
+The security token is passed in with `firewebkit-token` parameter. For example `https://fn.firewebkit.com/abcdefghijklmnopqrstuvwxyz/save-user?firewebkit-token=<Security Token>`. In this example `abcdefghijklmnopqrstuvwxyz` is your project ID.
 
 You can also put this function behind hosting options and pass in security token internally using hosting options. See [Example #4 - Function call with custom query](/services/hosting.md#rewrite-rules)
 
@@ -110,11 +110,11 @@ The function box is an isolated environment that runs your code. It can be in on
 2. Idle state where function box is ready and waiting for triggers
 
 ## Environment Variables
-Your functions can be provisioned with custom environment variables that you define on [functions page](https://console.amrayn.com/functions) by clicking "Env" button. If your function box is running, it will need to be restarted for any changes to the environment variable to take place.
+Your functions can be provisioned with custom environment variables that you define on [functions page](https://console.firewebkit.com/functions) by clicking "Env" button. If your function box is running, it will need to be restarted for any changes to the environment variable to take place.
 
 <img src="https://i.imgur.com/Is1ilki.png" style="width:200px;border:1px dashed #ccc;"/>
 
 ## View Logs
-Once your function box is running, you can view the logs from your functions on [functions page](https://console.amrayn.com/functions) by clicking "View Logs" button. Following example if from [Wetsand Demo project](https://github.com/amrayn/wetsand-demo).
+Once your function box is running, you can view the logs from your functions on [functions page](https://console.firewebkit.com/functions) by clicking "View Logs" button. Following example if from [Wetsand Demo project](https://github.com/amrayn/wetsand-demo).
 
 <img src="https://i.imgur.com/4xelbjx.png" style="width:500px;border:1px dashed #ccc;"/>

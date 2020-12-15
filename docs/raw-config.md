@@ -3,7 +3,7 @@
 | Name | Type | Description |
 |------|------|-------|
 | `DISABLE_INTERNAL_DATA_ACCESS` | Bool | When true the private data table cannot be accessed via hosting rewrite rule (`privateCloudData`) |
-| `MAX_WETSAND_APP_SUBDOMAINS` | Number | Maximum *.app.console.amrayn.com domains for the project. No limitation applied if value is -1 |
+| `MAX_WETSAND_APP_SUBDOMAINS` | Number | Maximum *.fireweb.app domains for the project. No limitation applied if value is -1 |
 | `MAX_DOMAINS` | Number | Maximum domains including wetsand site subdomains. No limitation applied if value is -1 |
 | `EMAIL_BORDER_COLOR` | Hex Color (String) | Color for email border |
 | `EMAIL_BUTTON_COLOR` | Hex Color (String) | Background color for the email buttons |
@@ -32,7 +32,7 @@
 | `MAX_MEDIA_SIZE_ALLOWED_MB` | Number | Maximum media size allowed per file |
 | `PREFERRED_SSL_GROUP` | Number | Preferred SSL group for hosting domains. Value between 1-364 |
 | `PRIVATE_DATA_ACCESS_KEY` | String | Key to be used with header `authorization: private-data-access-key <key>` when querying cloud data with private data table |
-| `SANDBOX_SERVICE_SECRET` | String | Function box accesses API server internally using this secret. Some routes require this secret to be presented in header `authorization: amrayn-security <secret>`<br>List of such routes are:<br> • `/clients/:proj/cloud-data/private/:table` (POST & GET)<br> • `/priv-dt/:proj/:table_slug` (POST & GET)|
+| `SANDBOX_SERVICE_SECRET` | String | Function box accesses API server internally using this secret. Some routes require this secret to be presented in header `authorization: firewebkit-security <secret>`<br>List of such routes are:<br> • `/clients/:proj/cloud-data/private/:table` (POST & GET)|
 | `SANDBOX_IDLE` | Number | Hibernate function box after these many minutes of inactivity |
 | `SANDBOX_CPU_SET` | CSV | See `--cpuset-cpus` option in docker. To test with: docker run --rm -it --cpuset-cpus="0,1" --cpus=1.5 deployable/stress -c 1 |
 | `SANDBOX_CPU_LIMIT` | Float | See `--cpus` option in docker. See `SANDBOX_CPU_SET` |

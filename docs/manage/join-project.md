@@ -1,11 +1,11 @@
 # Join Project
 To join an existing wetsand project, you need to have "project secret key". Once you have that, it is a simple few step process.
 
-> Admins can view the project secret key on Members tab (under current members list) on [security](https://console.amrayn.com/security#members) page.
+> Admins can view the project secret key on Members tab (under current members list) on [security](https://console.firewebkit.com/security#members) page.
 
 #### 1. Log in to Wetsand
 
-#### 2. Go to [projects](https://console.amrayn.com/projects)
+#### 2. Go to [projects](https://console.firewebkit.com/projects)
 
 #### 3. Click "Join Project"
 
