@@ -2,9 +2,9 @@
 ## Introduction
 Wetsand functions are stateless functions that run on server-side.
 
-> You might want to start by installing `wetsand` package that contains utility functions. Although it is not necessary but it aids in communicating with Wetsand API.
+> You might want to start by installing `firewebkit-functions` package that contains utility functions. Although it is not necessary but it aids in communicating with the API.
 >
-> ```yarn add wetsand```
+> ```yarn add firewebkit-functions```
 
 ## Getting Started
 Your module uses same pattern as express middleware.
@@ -12,13 +12,13 @@ Your module uses same pattern as express middleware.
 ```javascript
 module.exports = (req, res) => {
   res.json({
-    message: 'Welcome from wetsand functions!'
+    message: 'Welcome from firewebkit functions!'
   });
 }
 ```
 
 ## Configure
-Add following object to your wetsand configruation
+Add following object to your firewebkit configuration
 
 ```json
 "functions": {
@@ -41,7 +41,7 @@ Add following object to your wetsand configruation
 ```
 
 ## Deploying a Function
-1. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
+1. Generate firewebkit token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
 2. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
 ```bash
 firewebkit deploy-function -t "$FIREWEBKIT_TOKEN" --function read-info -m "My first function"
@@ -67,7 +67,7 @@ app.use((req, res, next) => {
 
 app.use((req, res) => {
   res.json({
-    message: 'Welcome from wetsand functions that can have custom routes!'
+    message: 'Welcome from firewebkit functions that can have custom routes!'
   });
 });
 
@@ -94,9 +94,9 @@ These function require security token and passed in to query parameter when trig
 
 The security token is passed in with `firewebkit-token` parameter. For example `https://fn.firewebkit.com/abcdefghijklmnopqrstuvwxyz/save-user?firewebkit-token=<Security Token>`. In this example `abcdefghijklmnopqrstuvwxyz` is your project ID.
 
-You can also put this function behind hosting options and pass in security token internally using hosting options. See [Example #4 - Function call with custom query](/services/hosting.md#rewrite-rules)
+You can also put this function behind hosting options and pass in security token internally using hosting options. See [Example #4 - Function call with custom query](/docs/services/hosting#rewrite-rules)
 
-> See [tokens](/security/tokens.md) to these generate tokens
+> See [tokens](/docs/security/tokens) to these generate tokens
 
 #### `HTTP_SCOPED_AUTH`
 These functions require function specific security token and passed in to query parameter (just like `HTTP_AUTH`) when triggering the function. The security must be scoped to `/authfn/<function1>,<function2>,...` for example `/authfn/create-image,resize-image` will be able to trigger functions `create-image` and `resize-image`.
@@ -115,6 +115,6 @@ Your functions can be provisioned with custom environment variables that you def
 <img src="https://i.imgur.com/Is1ilki.png" style="width:200px;border:1px dashed #ccc;"/>
 
 ## View Logs
-Once your function box is running, you can view the logs from your functions on [functions page](https://console.firewebkit.com/functions) by clicking "View Logs" button. Following example if from [Wetsand Demo project](https://github.com/amrayn/wetsand-demo).
+Once your function box is running, you can view the logs from your functions on [functions page](https://console.firewebkit.com/functions) by clicking "View Logs" button.
 
 <img src="https://i.imgur.com/4xelbjx.png" style="width:500px;border:1px dashed #ccc;"/>

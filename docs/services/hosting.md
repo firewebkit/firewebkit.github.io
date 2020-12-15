@@ -3,9 +3,9 @@
 Firewebkit hosting service can be used to:
 1. Host static website
 2. Host SPA website with routes
-3. Rewrites to your [serverless function](/services/functions) with protected tokens (e.g, yourdomain.com/api/resize-image)
-4. Access private [data](/services/data) with filters etc
-5. Rewrites to your [media](/services/media) and [contents](/services/contents)
+3. Rewrites to your [serverless function](/docs/services/functions) with protected tokens (e.g, yourdomain.com/api/resize-image)
+4. Access private [data](/docs/services/data) with filters etc
+5. Rewrites to your [media](/docs/services/media) and [contents](/docs/services/contents)
 
 ## Deploying a Site
 Follow the following steps to deploy your site.
