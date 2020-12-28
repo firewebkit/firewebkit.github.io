@@ -1,7 +1,7 @@
 # Contents Manager
-You can manage your contents right from Wetsand console. The contents are then available from the Wetsand API.
+You can manage your contents right from firewebkit console. The contents are then available from the firewebkit API.
 
-## Pages & Segements
+## Pages & Segments
 The page is high level content. For example, "about" is a page and in it are various segments like "copyright" and "background"
 
 The segement must be specified even if you're using just the page. We recommend using `default` as segment name in such cases.

@@ -3,11 +3,11 @@
 | Name | Type | Description |
 |------|------|-------|
 | `DISABLE_INTERNAL_DATA_ACCESS` | Bool | When true the private data table cannot be accessed via hosting rewrite rule (`privateCloudData`) |
-| `MAX_WETSAND_APP_SUBDOMAINS` | Number | Maximum *.fireweb.app domains for the project. No limitation applied if value is -1 |
-| `MAX_DOMAINS` | Number | Maximum domains including wetsand site subdomains. No limitation applied if value is -1 |
+| `MAX_APP_SUBDOMAINS` | Number | Maximum `*.fireweb.app` domains for the project. No limitation applied if value is -1 |
+| `MAX_DOMAINS` | Number | Maximum domains including firewebkit site subdomains. No limitation applied if value is -1 |
 | `EMAIL_BORDER_COLOR` | Hex Color (String) | Color for email border |
 | `EMAIL_BUTTON_COLOR` | Hex Color (String) | Background color for the email buttons |
-| `ENQUIRY_RECIPIENT` | String | Recipient for enquiries sent using wetsand API |
+| `ENQUIRY_RECIPIENT` | String | Recipient for enquiries sent using firewebkit API |
 | `EMAIL_CLIENT_LOGO` | String | Logo for the emails sent on behalf of the project |
 | `EMAIL_CLIENT_NAME` | String | Alternative name to the logo for the emails sent on behalf of the project. See `EMAIL_CLIENT_LOGO` |
 | `FUNCTIONS_LOGGING_LEVEL` | String | The logging level for function box. Possible values are `silly`, `debug`, `info`, `warn`, `error` (winston) |

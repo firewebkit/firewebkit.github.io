@@ -23,20 +23,20 @@ Follow the following steps to deploy your site.
     }
     ```
  3. Ensure you have "build" directory - this is the source of your website to be pushed
- 4. Generate wetsand token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
+ 4. Generate firewebkit token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/hosting/deploy`
  5. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
  ```bash
  firewebkit deploy-site -t "$FIREWEBKIT_TOKEN" -m "My first website"
  ```
 
- > Learn more about [tokens here](/security/tokens.md)
+ > Learn more about [tokens here](/docs/security/tokens)
 
 ## Hosting Options
 Hosting options determine how requests to your website are handled. This is an object with following high-level fields:
 
  * `ignore <array>` - Array of pattern (string) both glob and regular expressions that will be ignored
  * `forceHttps <boolean>` – Firewebkit forces (and redirects) non-HTTP URLs to HTTPs
- * `parked <boolean>` – Responds with wetsand "parked" webpage for every request
+ * `parked <boolean>` – Responds with firewebkit "parked" webpage for every request
  * `trailingSlash <boolean>` – Adds/removes trailing slash to the URLs if not found/found (respectively)
  * `headers <array>`
  * `rewrites <array>`
@@ -84,9 +84,9 @@ Hosting options determine how requests to your website are handled. This is an o
  ]
  ```
  The example is best suitable for single page applications.
- 1. `"source": "/\\?(.*)"` tells wetsand that anything with slash and `?` should use `index.html` as destination
+ 1. `"source": "/\\?(.*)"` tells firewebkit that anything with slash and `?` should use `index.html` as destination
  2. The source pattern in second object is `glob` pattern (determined by `patternType` which is only applicable with `destination`)
- 3. The second pattern tells wetsand anything that doesn't match any of these files e.g, `manifest.json` should use `index.html` as destination
+ 3. The second pattern tells firewebkit anything that doesn't match any of these files e.g, `manifest.json` should use `index.html` as destination
 
 #### Example 2: Simple function call
  ```json
@@ -105,7 +105,7 @@ Hosting options determine how requests to your website are handled. This is an o
 
  `acceptQueryParameters` means any query parameters in `/api/read-info` will be passed down to the function.
 
- Note: this would fail with query parameters because you have not told wetsand to handle it. You can change the
+ Note: this would fail with query parameters because you have not told firewebkit to handle it. You can change the
  `source` to `/api/read-info(.*)` to do it, but that would also mean even `/api/read-information` would work too.
  You can also use `/api/read-info\\?(.*)` - which would fix it but it would always require url to end with `?`.
  Unfortunately, this is current limitation, nevertheless, it doesn't affect the functionality.
@@ -232,4 +232,4 @@ external access to the private data tables (using `DISABLE_INTERNAL_DATA_ACCESS`
    }
 ]
 ```
-You can read the contents from your contents editor for specified page/segement using `example.com/api/contents/mypage`
+You can read the contents from your contents editor for specified page/segment using `example.com/api/contents/mypage`

@@ -1,6 +1,6 @@
 # Functions
 ## Introduction
-Wetsand functions are stateless functions that run on server-side.
+Firewebkit functions are stateless functions that run on server-side.
 
 > You might want to start by installing `firewebkit-functions` package that contains utility functions. Although it is not necessary but it aids in communicating with the API.
 >
@@ -43,6 +43,7 @@ Add following object to your firewebkit configuration
 ## Deploying a Function
 1. Generate firewebkit token from [security](https://console.firewebkit.com/security#tokens) page and export it as `FIREWEBKIT_TOKEN`. Minimum scope required for hosting deployment is `/functions/deploy`
 2. Now use [firewebkit-cli](https://www.npmjs.com/package/firewebkit-cli) to deploy:
+
 ```bash
 firewebkit deploy-function -t "$FIREWEBKIT_TOKEN" --function read-info -m "My first function"
 ```
@@ -112,9 +113,9 @@ The function box is an isolated environment that runs your code. It can be in on
 ## Environment Variables
 Your functions can be provisioned with custom environment variables that you define on [functions page](https://console.firewebkit.com/functions) by clicking "Env" button. If your function box is running, it will need to be restarted for any changes to the environment variable to take place.
 
-<img src="https://i.imgur.com/Is1ilki.png" style="width:200px;border:1px dashed #ccc;"/>
+<img src="/assets/screens/env-btn.png" style="width:200px;border:1px dashed #ccc;"/>
 
 ## View Logs
 Once your function box is running, you can view the logs from your functions on [functions page](https://console.firewebkit.com/functions) by clicking "View Logs" button.
 
-<img src="https://i.imgur.com/4xelbjx.png" style="width:500px;border:1px dashed #ccc;"/>
+<img src="/assets/screens/logs.png" style="width:500px;border:1px dashed #ccc;"/>

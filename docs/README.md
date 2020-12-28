@@ -28,7 +28,30 @@
     •   •   •
 </p>
 
+[This is WIP]
 
-<p align="center">
-[This is still WIP]
-</p>
+## Table of Contents
+
+### Projects
+  * [Create Project](/docs/manage/create-project)
+  * [Join Project](/docs/manage/join-project)
+  * [Invite Someone](/docs/manage/invite-someone)
+
+### Services
+  * [Hosting](/docs/services/hosting)
+  * [Functions](/docs/services/functions)
+  * [Media](/docs/services/media)
+  * [Contents Editor](/docs/services/contents)
+  * [Data Manager](/docs/services/data)
+  * [Emails](/docs/services/emails)
+
+### Settings
+  * [Raw Configuration](/docs/manage/raw-config)
+  * [Preferences](/docs/manage/preferences)
+  
+### [Security](/docs/security/README)
+  * [Roles](/docs/security/roles)
+  * [Permissions](/docs/security/permissions)
+  * [Signatures](/docs/security/signatures)
+  * [Tokens](/docs/security/tokens)
+  * [Sessions](/docs/security/sessions)
