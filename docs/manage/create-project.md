@@ -1,7 +1,7 @@
 # Create Project
 Creating firewebkit project is a simple few step process that will give you ability to administer the project.
 
-#### 1. Log in to Wetsand
+#### 1. Log in to Firewebkit
 
 #### 2. Go to [projects](https://console.firewebkit.com/projects)
 

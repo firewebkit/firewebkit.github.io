@@ -1,5 +1,5 @@
 # Data Manager
-Wetsand cloud data is NoSQL database that gives developer power to create, update, filter, sort and paginate the documents without worrying about underlying mechanism. By default, Wetsand uses MongoDB engine, but this does not affect how developers interact with their data.
+Firewebkit data is NoSQL database that gives developer power to create, update, filter, sort and paginate the documents without worrying about underlying mechanism. By default, firewebkit uses MongoDB API, but this does not affect how developers interact with their data.
 
 ## Create Data Table
 Creating a data table requires you to have knowledge of [JSON Schema](https://json-schema.org/). However, Data table UI comes with templates that makes it easy for anyone with basic JSON knowledge to create data table smoothly.
@@ -8,7 +8,7 @@ You can use JSON to JSONSchema tools [like this one](https://www.liquid-technolo
 
 We're working on tools to build the forms from within the console.
 
-## Wetsand NPM Package
+## Firewebkit Functions Package
 ## Query
 
 ## Aggregation
