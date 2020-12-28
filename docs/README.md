@@ -48,8 +48,8 @@
 ### Settings
   * [Raw Configuration](/docs/manage/raw-config)
   * [Preferences](/docs/manage/preferences)
-  
-### [Security](/docs/security/README)
+
+### [Security](/docs/security/)
   * [Roles](/docs/security/roles)
   * [Permissions](/docs/security/permissions)
   * [Signatures](/docs/security/signatures)
